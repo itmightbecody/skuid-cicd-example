@@ -1,0 +1,24 @@
+<skuidpage unsavedchangeswarning="yes" personalizationmode="server" showsidebar="true" showheader="true">
+	<models/>
+	<components>
+		<buttonset uniqueid="sk-1spf-81" position="center">
+			<buttons>
+				<button type="multi" label="My button" uniqueid="test-button">
+					<actions>
+						<action type="blockUI" message="The button renders and is clickable." timeout="2000"/>
+					</actions>
+				</button>
+			</buttons>
+			<renderconditions logictype="and"/>
+		</buttonset>
+	</components>
+	<resources>
+		<labels/>
+		<javascript/>
+		<css/>
+		<actionsequences/>
+	</resources>
+	<styles>
+		<styleitem type="background" bgtype="none"/>
+	</styles>
+</skuidpage>

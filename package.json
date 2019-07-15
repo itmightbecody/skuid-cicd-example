@@ -1,0 +1,11 @@
+
+{
+  "name": "skuid-cicd-test",
+  "version": "1.0.0",
+  "description": "Tests for basic CICD use with Skuid",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine example-spec.js"
+  },
+  "author": "Cody Taylor <cody@skuid.com>",
+  "license": "MIT",
+}
