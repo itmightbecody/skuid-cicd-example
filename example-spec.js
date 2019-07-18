@@ -64,7 +64,8 @@ describe("Basic element tests", function() {
     beforeEach(async function() {
         await login();
         console.log('Test beginning.')
-        console.log(document.getElementsByTagName('body')[0])
+        console.log(await driver.findElement(By.css('nx-page')))
+
     });
     // After each test, close the browser.
     afterAll(async function() {
