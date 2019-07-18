@@ -3,8 +3,20 @@
   "version": "1.0.0",
   "description": "Tests for basic CICD use with Skuid",
   "scripts": {
-    "test": "./node_modules/.bin/jasmine example-spec.js"
+    "test": "jasmine example-spec.js"
   },
   "author": "Cody Taylor <cody@skuid.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jasmine": "^3.4.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itmightbecody/skuid-cicd-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itmightbecody/skuid-cicd-test/issues"
+  },
+  "homepage": "https://github.com/itmightbecody/skuid-cicd-test#readme"
 }
