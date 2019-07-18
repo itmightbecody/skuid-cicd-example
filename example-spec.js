@@ -84,6 +84,10 @@ describe("Basic element tests", function() {
         }
         console.log('Running test...')
         console.log('Going to '+ baseUrl + '/ui/page/preview/' + testData.pageName)
+        
+                return driver.getCurrentUrl();
+
+
         // Preview the test page
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
 
