@@ -88,7 +88,7 @@ describe("Basic element tests", function() {
         // Preview the test page
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
 
-                        console.log(driver.getCurrentUrl())
+                        console.log(await driver.getCurrentUrl())
                         console.log('The HTML of the page')
         console.log(await driver.findElement(By.css('body')).getAttribute('innerHTML'))
 
