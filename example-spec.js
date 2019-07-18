@@ -66,7 +66,6 @@ describe("Basic element tests", function() {
     beforeEach(async function() {
         await login();
         console.log('Test beginning.')
-        console.log(await driver.findElement(By.css('body')).getAttribute('innerHTML'))
 
     });
     // After each test, close the browser.
@@ -87,6 +86,8 @@ describe("Basic element tests", function() {
 
         // Preview the test page
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
+
+        console.log(await driver.findElement(By.css('body')).getAttribute('innerHTML'))
 
         // Wait for button
         await driver.wait(until.elementLocated(testData.button), 10 * 1000);
