@@ -38,6 +38,8 @@ var login = async function() {
     await driver.wait(until.elementLocated(loginContainer), 10 * 1000);
     console.log('Login screen loaded.')
 
+    console.log(await driver.findElement(By.css('body')).getAttribute('innerHTML'))
+
     // Check to see if SSO has been enabled for this site.
     // If it has, click through to log in with credentials instead.
     await driver.findElement(btnLoginWithoutSso).then(async function(){
@@ -64,7 +66,7 @@ describe("Basic element tests", function() {
     beforeEach(async function() {
         await login();
         console.log('Test beginning.')
-        console.log(await driver.findElement(By.css('body')).getAttribute('innerText'))
+        console.log(await driver.findElement(By.css('body')).getAttribute('innerHTML'))
 
     });
     // After each test, close the browser.
