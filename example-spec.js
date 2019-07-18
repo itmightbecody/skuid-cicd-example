@@ -108,32 +108,32 @@ describe("Basic element tests", function() {
         expect(await driver.findElement(testData.blockMessage).getText()).toBe('The button renders and is clickable.');
     });
 
-    // Specify a second test
-    it("Click the button, Verify Incorrect UI Block Message", async function() {
-        // Provide basic data used to evaluate the test.
-        // This test should fail.
-        var testData = {
-            pageName: 'SeleniumTest',
-            button: By.css('#test-button'),
-            blockMessage: By.css('div.blockUI.blockMsg')
-        }
+    // // Specify a second test
+    // it("Click the button, Verify Incorrect UI Block Message", async function() {
+    //     // Provide basic data used to evaluate the test.
+    //     // This test should fail.
+    //     var testData = {
+    //         pageName: 'SeleniumTest',
+    //         button: By.css('#test-button'),
+    //         blockMessage: By.css('div.blockUI.blockMsg')
+    //     }
 
-        // Preview the test page
-        await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
+    //     // Preview the test page
+    //     await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
 
-        // Wait for button
-        await driver.wait(until.elementLocated(testData.button), 10 * 1000);
+    //     // Wait for button
+    //     await driver.wait(until.elementLocated(testData.button), 10 * 1000);
 
-        // Verify button is present
-        expect(await driver.findElement(testData.button).isDisplayed()).toBe(true);
+    //     // Verify button is present
+    //     expect(await driver.findElement(testData.button).isDisplayed()).toBe(true);
 
-        // Click button
-        await driver.findElement(testData.button).click();
+    //     // Click button
+    //     await driver.findElement(testData.button).click();
 
-        // Wait for and Verify Correct UI Block Message
-        await driver.wait(until.elementLocated(testData.blockMessage), 10 * 1000);
+    //     // Wait for and Verify Correct UI Block Message
+    //     await driver.wait(until.elementLocated(testData.blockMessage), 10 * 1000);
 
-        // Verify the text of the message, which should *not* match the example page XML
-        expect(await driver.findElement(testData.blockMessage).getText()).toBe('These aren\'t the Droids you\'re looking for..');
-    });
+    //     // Verify the text of the message, which should *not* match the example page XML
+    //     expect(await driver.findElement(testData.blockMessage).getText()).toBe('These aren\'t the Droids you\'re looking for..');
+    // });
 });
