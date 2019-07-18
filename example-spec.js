@@ -83,7 +83,7 @@ describe("Basic element tests", function() {
             blockMessage: By.css('div.blockUI.blockMsg')
         }
         console.log('Running test...')
-
+        console.log('Going to '+ baseUrl + '/ui/page/preview/' + testData.pageName)
         // Preview the test page
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
 
