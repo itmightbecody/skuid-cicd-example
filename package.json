@@ -8,7 +8,9 @@
   "author": "Cody Taylor <cody@skuid.com>",
   "license": "MIT",
   "dependencies": {
-    "jasmine": "^3.4.0"
+    "chromedriver": "^75.1.0",
+    "jasmine": "^3.4.0",
+    "selenium-webdriver": "^4.0.0-alpha.4"
   },
   "devDependencies": {},
   "repository": {
