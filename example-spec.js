@@ -64,7 +64,7 @@ describe("Basic element tests", function() {
     beforeEach(async function() {
         await login();
         console.log('Test beginning.')
-        console.log(driver.findElement(By.css('body')).getAttribute('innerText'))
+        console.log(await driver.findElement(By.css('body')).getAttribute('innerText'))
 
     });
     // After each test, close the browser.
