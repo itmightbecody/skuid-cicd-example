@@ -1,0 +1,11 @@
+{
+	"apiVersion": "v1",
+	"uniqueId": "SeleniumTest",
+	"type": "Desktop",
+	"name": "SeleniumTest",
+	"module": "",
+	"maxAutoSaves": 25,
+	"isMasterPage": false,
+	"isPublic": false,
+	"composerSettings": null
+}
