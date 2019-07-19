@@ -89,8 +89,6 @@ describe("Basic element tests", function() {
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
 
                         console.log(await driver.getCurrentUrl())
-                        console.log('The HTML of the page')
-        console.log(await driver.findElement(By.css('body')).getAttribute('innerHTML'))
 
         // Wait for button
         await driver.wait(until.elementLocated(testData.button), 10 * 1000);
