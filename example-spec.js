@@ -88,7 +88,7 @@ describe("Basic element tests", function() {
         // Preview the test page
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
 
-        await driver.wait(until.stalenessOf(driver.findElement(By.id('sk-nprogress'))))
+        // await driver.wait(until.stalenessOf(driver.findElement(By.id('sk-nprogress'))))
 
         console.log(await driver.getCurrentUrl())
 
