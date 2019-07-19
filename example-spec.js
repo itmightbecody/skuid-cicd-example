@@ -94,6 +94,7 @@ describe("Basic element tests", function() {
 
         console.log(await driver.getTitle())
 
+        console.log('The current URL and title should be listed above')
         // Wait for button
         await driver.wait(until.elementLocated(testData.button), 10 * 1000);
 
