@@ -17,8 +17,8 @@ const password = process.env.SKUID_PW
 var login = async function() {
     // Define login elements
     let loginContainer = By.css('.public-main-wrapper');
-    let inpUsername = By.xpath('//*[@id="username-input-field"]//input');
-    let inpPassword = By.xpath('//*[@id="password-input-field"]//input');
+    let inpUsername = By.css('#username-input-field input');
+    let inpPassword = By.css('#password-input-field input');
     let btnLoginWithoutSso = By.id('login-without-sso-button');
     let btnLogin = By.id('userpass-login-button');
     var enterCredentialsAndLogin = async function() {
