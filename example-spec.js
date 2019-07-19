@@ -38,7 +38,7 @@ var login = async function() {
     await driver.wait(until.elementLocated(loginContainer), 10 * 1000);
     console.log('Login screen loaded.')
 
-    console.log(await driver.findElement(By.css('body')).getAttribute('innerHTML'))
+    // console.log(await driver.findElement(By.css('body')).getAttribute('innerHTML'))
 
     // Check to see if SSO has been enabled for this site.
     // If it has, click through to log in with credentials instead.
@@ -88,7 +88,9 @@ describe("Basic element tests", function() {
         // Preview the test page
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
 
-                        console.log(await driver.getCurrentUrl())
+        console.log(await driver.getCurrentUrl())
+
+        console.log(await driver.getTitle())
 
         // Wait for button
         await driver.wait(until.elementLocated(testData.button), 10 * 1000);
