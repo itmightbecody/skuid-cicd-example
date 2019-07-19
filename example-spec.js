@@ -84,13 +84,14 @@ describe("Basic element tests", function() {
         }
         console.log('Running test...')
         console.log('Going to '+ baseUrl + '/ui/page/preview/' + testData.pageName)
+             await login();
+        console.log('Trying to log in in again...')
+
 
         // Preview the test page
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
 
-        await login();
-        console.log('Trying to log in in again...')
-
+   
         console.log(await driver.getCurrentUrl())
 
         console.log(await driver.getTitle())
