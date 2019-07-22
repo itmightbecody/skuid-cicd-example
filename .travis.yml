@@ -8,3 +8,9 @@ before_script:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 addons:
   chrome: stable
+jobs:
+  include:
+    - stage: test
+    - stage: deploy
+      if: branch = master
+      script: bash scripts/deploy.sh

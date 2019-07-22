@@ -1,0 +1,1 @@
+skuid deploy --username $PRODUCTION_UN --password $PRODUCTION_PW --host $PRODUCTION_HOST
