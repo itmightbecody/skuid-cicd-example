@@ -59,13 +59,6 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 20 * 1000;
 
 // Define a category of tests using test framework, in this case Jasmine
 describe("Basic element tests", function() {
-    // Before every test, open a browser and login
-    // using the logic written above.
-    beforeEach(async function() {
-        await login();
-        console.log('Test beginning.')
-
-    });
     // After each test, close the browser.
     afterAll(async function() {
         await driver.quit();
