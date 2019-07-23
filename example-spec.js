@@ -50,7 +50,7 @@ var login = async function() {
 
     // Wait to be logged in, assuming it was was successful 
     // once the Log in button has gone "stale."
-    await driver.wait(until.stalenessOf(driver.findElement(btnLogin)));
+    await driver.wait(until.elementLocated(By.css('.sk-navigation-item-label')))
     console.log('Logged in.')
 }
 // Configure Jasmine's timeout value to account for longer tests.
@@ -91,9 +91,6 @@ describe("Basic element tests", function() {
 
         // Preview the test page
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
-
-        console.log(await driver.getCurrentUrl())
-        console.log('The current URL and title should be listed above')
 
         // Wait for button
         await driver.wait(until.elementLocated(testData.button), 10 * 1000);
