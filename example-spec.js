@@ -92,8 +92,9 @@ describe("Basic element tests", function() {
         // Preview the test page
         await driver.get(baseUrl + '/ui/page/preview/' + testData.pageName);
 
-        console.log(await driver.getCurrentUrl)
+        console.log(await driver.getCurrentUrl())
         console.log('The current URL and title should be listed above')
+
         // Wait for button
         await driver.wait(until.elementLocated(testData.button), 10 * 1000);
 
