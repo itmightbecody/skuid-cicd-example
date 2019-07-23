@@ -61,11 +61,11 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 20 * 1000;
 describe("Basic element tests", function() {
     // Before every test, open a browser and login
     // using the logic written above.
-    beforeEach(async function() {
-        await login();
-        console.log('Test beginning.')
+    // beforeEach(async function() {
+    //     await login();
+    //     console.log('Test beginning.')
 
-    });
+    // });
     // After each test, close the browser.
     afterAll(async function() {
         await driver.quit();
@@ -81,9 +81,12 @@ describe("Basic element tests", function() {
             blockMessage: By.css('div.blockUI.blockMsg')
         }
         console.log('Running test...')
-        console.log('Going to '+ baseUrl + '/ui/page/preview/' + testData.pageName)
-        await login();
+        
         console.log('Trying to log in in again...')
+        await login();
+
+        console.log('Going to '+ baseUrl + '/ui/page/preview/' + testData.pageName)
+
 
 
         // Preview the test page
