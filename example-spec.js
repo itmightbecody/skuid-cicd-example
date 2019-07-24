@@ -50,7 +50,7 @@ var login = async function() {
 
     // Wait to be logged in, assuming it was was successful 
     // once the Log in button has gone "stale."
-    await driver.wait(until.elementLocated(By.css('.sk-navigation-item-label')))
+    await driver.wait(until.stalenessOf(driver.findElement(btnLogin)));
     console.log('Logged in.')
 }
 // Configure Jasmine's timeout value to account for longer tests.
