@@ -1,7 +1,8 @@
 language: node_js
 node_js: 
   - 10
-sudo: required
+before_script:
+  - google-chrome-stable  --disable-gpu --remote-debugging-port=9222 http://localhost &
 addons:
   chrome: stable
 jobs:
