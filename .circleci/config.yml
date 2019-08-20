@@ -4,10 +4,13 @@
      docker:
        - image: circleci/node
      steps:
-       - checkout
-        - run:
-            name: Install Selenium
-            command: wget http://selenium-release.storage.googleapis.com/3.4
-        - run: 
-          name: Run tests
-          command: npm test
+      - checkout
+      - run: 
+        name: Install dependencies
+        command: npm ci
+      - run:
+          name: Install Selenium
+          command: wget http://selenium-release.storage.googleapis.com/3.4
+      - run: 
+        name: Run tests
+        command: npm test
