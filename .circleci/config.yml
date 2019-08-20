@@ -5,6 +5,9 @@
        - image: circleci/node
      steps:
         - checkout
+        - run:
+            name: Install JRE
+            command: apt-get install default-jre
         - run: 
             name: Install dependencies
             command: npm ci
