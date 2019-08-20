@@ -13,6 +13,8 @@ before_script:
   - sleep 3 # give xvfb some time to start
 addons:
   chrome: stable
+script:
+  - docker run node:10.16.3 /bin/sh -c "npm test"
 jobs:
   include:
     - stage: test
