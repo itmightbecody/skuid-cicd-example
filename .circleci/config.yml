@@ -6,8 +6,5 @@
      steps:
         - checkout
         - run: 
-            name: Install dependencies
-            command: npm ci
-        - run: 
             name: Run tests
             command: npm test
