@@ -14,7 +14,7 @@ before_script:
 addons:
   chrome: stable
 script:
-  - docker run node:10.16.3 /bin/sh -c "npm test"
+  - docker run node:10.16.3 /bin/sh -c "npm ci; npm test"
 jobs:
   include:
     - stage: test
