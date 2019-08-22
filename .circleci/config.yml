@@ -6,8 +6,14 @@
      steps:
         - checkout
         - run: 
-            name: Install dependencies
+            name: Install node dependencies
             command: npm ci
+        - run:
+          name: Install skuid CLI
+          command: |
+              curl -Lo skuid $(curl -sL https://api.github.com/repos/skuid/skuid-cli/releases/latest | grep "browser_download_url.*linux" | awk -F '"' '{print $4}')
+              chmod +x skuid
+              sudo mv skuid /usr/local/bin/skuid
         - run: 
             name: Run tests
             command: npm test
