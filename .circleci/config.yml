@@ -1,0 +1,18 @@
+ version: 2
+ jobs:
+   build:
+     docker:
+       - image: circleci/node:10.16.3-browsers
+     steps:
+        - checkout
+        - run: 
+            name: Install dependencies
+            command: npm ci
+        - run: 
+            name: Run tests
+            command: npm test
+        - deploy:
+            command: |
+              if [ "${CIRCLE_BRANCH}" == "master" ]; then
+                scripts/deploy.sh;
+              fi
