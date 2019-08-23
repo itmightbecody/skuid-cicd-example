@@ -100,6 +100,6 @@ describe("Basic element tests", function() {
         await driver.wait(until.elementLocated(testData.blockMessage), 10 * 1000);
 
         // Verify the text of the message, which should match the example page XML
-        expect(await driver.findElement(testData.blockMessage).getText()).toBe('The button renders and is clickable.');
+        expect(await driver.findElement(testData.blockMessage).getText()).toBe('Test:The button renders and is clickable.');
     });
 });
