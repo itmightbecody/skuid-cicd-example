@@ -75,7 +75,7 @@ describe("Basic element tests", function() {
         // Provide basic data used to evaluate the test.
         // This test should pass.
         var testData = {
-            pageName: 'SeleniumTest',
+            pageName: 'AutomatedTestExample',
             button: By.css('#test-button'),
             blockMessage: By.css('div.blockUI.blockMsg')
         }
