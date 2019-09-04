@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Tests for basic CICD use with Skuid",
   "scripts": {
-    "test": "jasmine example-spec.js"
+    "test": "jasmine \"test/*.spec.js\""
   },
   "author": "Cody Taylor <cody@skuid.com>",
   "license": "MIT",
